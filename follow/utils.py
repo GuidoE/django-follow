@@ -3,7 +3,7 @@ from django.db.models.fields.related import ManyToManyField, ForeignKey
 from follow.models import Follow
 from follow.registry import registry, model_map
 from django import VERSION as DjangoVersion
-if float('%s.%s' % DjangoVersion[:2]) > 1.7:
+if float('%s.%s' % DjangoVersion[:2]) >= 1.7:
     module_name = 'model_name'
 else:
     module_name = 'module_name'
